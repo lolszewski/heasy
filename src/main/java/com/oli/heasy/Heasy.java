@@ -27,6 +27,10 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
  */
 public class Heasy extends Application<HeasyConfiguration> {
 
+    public static void main(String[] args) throws Exception {
+        new Heasy().run(args);
+    }
+
     @Override
     public void initialize(Bootstrap<HeasyConfiguration> btstrp) {
     }
@@ -115,9 +119,5 @@ public class Heasy extends Application<HeasyConfiguration> {
         context.start();
 
         return context;
-    }
-
-    public static void main(String[] args) throws Exception {
-        new Heasy().run(args);
     }
 }
